@@ -2,6 +2,7 @@
 \usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{tikz}
 
 \begin{document}
 	
@@ -202,5 +203,73 @@ Koska 893 voidaan jakaa luvuilla 19 ja 47 (molemmat ovat alkulukuja), sillä on 
 
 \section*{Tehtävä 5}
 
+Olkoot \(A \subset X \text{ ja } B \subset X\)
+
+\begin{enumerate}
+	
+\item[(a)]
+
+Osoitetaan, että
+\[
+(A \cup B) \cap \complement A \subset B.
+\]
+
+Olkoon \(x \in (A \cup B) \cap \complement A\).
+
+Tällöin \(x \in (A \cup B)\) ja \(x \in \complement A\).
+
+\begin{itemize}
+	\item \(x \in (A \cup B)\) tarkoittaa, että \(x \in A\) tai \(x \in B\).
+	\item \(x \in \complement A\) tarkoittaa, että \(x \notin A\).
+\end{itemize}
+
+Näin ollen \(x \notin A\) ja \(x \in (A \cup B)\), mikä tarkoittaa, että \(x \in B\).
+
+Tästä seuraa, että \(x \in B\), ja siis
+
+\[
+(A \cup B) \cap \complement A \subset B.
+\]
+
+
+\item[(b)]
+4b - Venn Diagrammi
+
+\begin{tikzpicture}
+	% Universumi X
+	\draw[thick] (0,0) circle (3.2);  % Piirrä universumi X
+	
+	% Joukkojen A ja B yhdiste varjostettuna (A ∪ B)
+	\begin{scope}
+		\clip (-1,0) circle (1.5);  % Leikkaa joukon A alue
+		\fill[gray!30] (1,0) circle (1.5);  % Täytä joukko B (A ∪ B)
+	\end{scope}
+	
+	% Komplementti A ja B yhteisalue varjostettuna ((A ∪ B) ∩ ¬A)
+	\begin{scope}
+		\clip (1,0) circle (1.5);  % Leikkaa joukon B alue
+		\fill[blue!30] (-3,-2) rectangle (3,2);  % Täytä alue ¬A
+	\end{scope}
+	
+	% Joukko A
+	\draw[thick] (-1,0) circle (1.5);
+	\node at (-1.2, 1) {$A$};  % Nimeä joukko A
+	
+	% Joukko B
+	\draw[thick] (1,0) circle (1.5);
+	\node at (1.2, 1) {$B$};  % Nimeä joukko B
+	
+	% Universumi X
+	\node at (-1.0, -2.3) {$X$};  % Nimeä universumi X
+\end{tikzpicture}
+
+\end{enumerate}
+
+
+\newpage
+
+\section*{Tehtävä 6}
+
+Testipalautus..
 
 \end{document}
