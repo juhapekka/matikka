@@ -161,45 +161,38 @@
 \newpage
 
 \section*{Tehtävä 4}
-
 Osoita, että 893 ei ole alkuluku.
-
-\begin{flushleft}
-Tarkistetaan, onko 893 jaollinen pienillä alkuluvuilla (enintään \( \sqrt{893} \approx 29.9 \)).
-\end{flushleft}
+\newline
+\newline
+Määritellään joukko, joka sisältää kaikki positiiviset kokonaisluvut \(x\), jotka jakavat 893 tasan:
+\[
+D = \{x \in \mathbb{P} : x \neq 1, x \neq 893, \text{ ja } \frac{893}{x} \in \mathbb{Z} \}.
+\]
+\newline
+Jos löydämme joukon \(D\) alkion, tiedämme, että 893 ei ole alkuluku.
+\newline
+\textbf{Tarkistetaan seuraavat arvot:}
 
 \begin{itemize}
 	\item \textbf{2:} 893 on pariton, joten se ei ole jaollinen 2:lla.
 	\item \textbf{3:} Lasketaan \(893 \div 3 = 297.666\ldots\). Koska tulos ei ole kokonaisluku, 893 ei ole jaollinen 3:lla.
 	\item \textbf{5:} Luku ei pääty 0:aan tai 5:een, joten se ei ole jaollinen 5:llä.
 	\item \textbf{7:} Lasketaan \(893 \div 7 \approx 127.57\), joka ei ole kokonaisluku. Siten 893 ei ole jaollinen 7:llä.
-	\item \textbf{11, 13, 17, 19, 23, 29:} Kokeillaan nämä yksitellen.
+	\item \textbf{11, 13, 17, 19, 23, 29:} Kokeillaan nämä yksitellen. Lasketaan \(893 \div 19 = 47\), joka on kokonaisluku.
 \end{itemize}
+\textbf{Johtopäätös:}
+\newline
+Koska 893 voidaan jakaa luvulla 19 ja tulos on 47 (molemmat ovat alkulukuja), niin 893 voidaan esittää tulona:
 
-\begin{flushleft}
-Kokeillaan lukua 19:
-\end{flushleft}
-\[
-893 \div 19 = 47.
-\]
-
-\begin{flushleft}
-Luku 47 on kokonaisluku, joten 893 voidaan esittää tulona:
-\end{flushleft}
 \[
 893 = 19 \times 47.
 \]
-
-\begin{flushleft}
-Koska 893 voidaan jakaa luvuilla 19 ja 47 (molemmat ovat alkulukuja), sillä on muitakin jakajia kuin 1 ja 893 itse.
-\end{flushleft}
-
-\begin{flushleft}
-\textbf{Johtopäätös:} Luku 893 ei ole alkuluku.
-\end{flushleft}
+\newline
+Täten, \(19 \in D\), ja voimme päätellä, että 893 ei ole alkuluku.
 
 
 \newpage
+
 
 \section*{Tehtävä 5}
 
