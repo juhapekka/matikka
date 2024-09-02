@@ -227,23 +227,24 @@ Tästä seuraa, että \(x \in B\), ja siis
 
 
 \item[(b)]
-4b - Venn Diagrammi
+Venn Diagrammi
 
 \begin{tikzpicture}
 	% Universumi X
 	\draw[thick] (0,0) circle (3.2);  % Piirrä universumi X
-	
-	% Joukkojen A ja B yhdiste varjostettuna (A ∪ B)
-	\begin{scope}
-		\clip (-1,0) circle (1.5);  % Leikkaa joukon A alue
-		\fill[gray!30] (1,0) circle (1.5);  % Täytä joukko B (A ∪ B)
-	\end{scope}
-	
+		
 	% Komplementti A ja B yhteisalue varjostettuna ((A ∪ B) ∩ ¬A)
 	\begin{scope}
 		\clip (1,0) circle (1.5);  % Leikkaa joukon B alue
 		\fill[blue!30] (-3,-2) rectangle (3,2);  % Täytä alue ¬A
 	\end{scope}
+	
+		% Joukkojen A ja B yhdiste varjostettuna (A ∪ B)
+	\begin{scope}
+		\clip (-1,0) circle (1.5);  % Leikkaa joukon A alue
+		\fill[white!30] (1,0) circle (1.5);  % Täytä joukko B (A ∪ B)
+	\end{scope}
+	
 	
 	% Joukko A
 	\draw[thick] (-1,0) circle (1.5);
