@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+    "**/.git/*": true,
+    "*.aux": true,
+    "*.pdf": true,
+    "*.log": true,
+    "*.fdb_latexmk": true,
+    ".gitignore": true,
+    "*.synctex.gz": true,
+    "*.fls":true
+}
+}
