@@ -122,5 +122,53 @@
 
     \newpage
 	\section*{Tehtävä 6}
+    Määritellään lukujono $(z_{n})$ rekursiivisesti \newline
+    $z_0 = 1, z_1 = 2, z_{n+1} = z_n + 2z_{n-1}, n \geq 1$ \newline
+
+    \begin{enumerate}
+        \item[(a)]
+        lukujonon 8 ensimmäistä lukua
+        \[
+        \begin{aligned}
+            z_0 &= 1\\
+            z_1 &= 2\\
+            z_2 &= 2 + 2 * 1 = 4\\
+            z_3 &= 4 + 2 * 2 = 8\\
+            z_4 &= 8 + 2 * 4 = 16\\
+            z_5 &= 16 + 2 * 8 = 32\\
+            z_6 &= 32 + 2 * 16 = 64\\
+            z_7 &= 64 + 2 * 32 = 128\\
+        \end{aligned}
+        \]
+        \item[(b)]
+        Esitä $z_n$ pelkän $n$:n avulla eli ratkaise rekursiivinen yhtälö kohdan (a) perusteella päättelemällä.
+        \[
+        z_n = 2^n
+        \]
+        \item[(c)]
+        Todista kohdan (b) tulos oikeaksi.\newline Todistetaan induktiolla: 
+        \[
+            \begin{aligned}
+                \text{perustapaus:} n = 0& \\
+                z_0 &= 1 \text{ ja } 2^0 = 1 \implies z_0 = 2^0\\
+                n = 1& \\
+                z_1 &= 2 \text{ ja } 2^1 = 2 \implies z_1 = 2^1\\[10pt]
+            \text{Induktio oletus: } n = k& - 1 \text{ ja } n = k \text{ missä } k \geq 1\\
+            \text{Induktio väite: } n = k& + 1 \\
+            z_{k + 1} =& \ 2^{k + 1}\\
+            \text{todistus:}\\
+            z_{k + 1} =& \ z_k + 2z_{k - 1}\\
+            =& \ 2^k + 2 \times 2^{k - 1}\\
+            \implies & 2 \times 2^{k - 1} = 2^1 \times 2^{k - 1} = 2^{1 + k - 1} = 2^k\\
+            \implies & 2 \times 2^{k - 1} = 2^k\\
+            \implies & 2^{k + 1} = 2^k + 2^k = 2 \times 2^k\\[5pt]
+            \text{joten:}&\\
+            & 2 \times 2^k = 2^1 \times 2^k = 2^{k + 1}\\
+            \implies & \ z_{k + 1} = 2^{k + 1}
+            \end{aligned}
+        \]
+        
+
+    \end{enumerate}
 
 \end{document}
