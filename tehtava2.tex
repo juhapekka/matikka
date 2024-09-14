@@ -82,5 +82,45 @@
             &\text{Koska perus askel ja induktio askel pätee voimme päätellä että se pätee kaikilla $n \in \mathbb{N}$, $n \geq 1$.} \\
         \end{aligned}
     \]
+    \newpage
+	\section*{Tehtävä 5}
+    Määritä luvut $n \in \mathbb{N}$, joilla pätee $2^n \leq n^2$. Todista väitteesi.
+    \newline
+    \newline
+    Kokeillaan pieniä $n$ arvoja:
+    \[
+        \begin{aligned}
+            &n = 1 \implies 2 \leq 1 \text{ Ei päde}\\
+            &n = 2 \implies 4 \leq 4 \text{ Pätee}\\
+            &n = 3 \implies 8 \leq 9 \text{ Pätee}\\
+            &n = 4 \implies 16 \leq 16 \text{ Pätee}\\
+            &n = 5 \implies 32 \leq 25 \text{ Ei päde}\\
+        \end{aligned}
+    \]
+    Osoitetaan induktiolla $n \geq 5$ pätee $2^n > n^2  $:
+    \[
+        \begin{aligned}
+            \text{perus tapaus:}&\\
+            &n = 5\\
+            &2^5 = 32\\
+            &5^2 = 25\\
+            &32 > 25 \text{ (väite pätee)}\\[10pt]
+            \text{Osoitetaan että kaikilla $n = k \geq 5$:}&\\
+            &2^k > k^2\\
+            \text{Induktioväite: Todistetaan, } & \text{että väite pätee myös n = k + 1}\\
+            &2^{k+1} > (k+1)^2\\
+            &\implies 2 * 2^k > (k + 1)^2 \mid \text{Käytetään induktion oletusta } 2^k > k^2\\
+            &\implies 2 * k^2 > k^2 + 2k + 1 \mid \text{Vähennetään molemmilta puolilta } k^2\\
+            &k^2 > 2k + 1\\
+            &k^2 - 2k - 1 > 0 \mid \text{saadaan positiivnen juuri } k = 1 + \sqrt{2} \approx 2.41\\
+            &\implies k^2 - 2k - 1 > 0 \text{ pätee kaikilla }k \geq 5 
+        \end{aligned}
+    \]
+    Luonnolliset luvut, joilla  $2^n \leq n^2$ pätee, ovat:
+    \newline
+    $n = 2, 3, 4$
+
+    \newpage
+	\section*{Tehtävä 6}
 
 \end{document}
