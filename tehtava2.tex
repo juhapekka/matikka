@@ -67,7 +67,20 @@
         \begin{aligned}
             &\text{Osoita että 3 + 11 + ... + (8n - 5) = 4n}^2 \text{ - n kaikilla n } \in \mathbb{N}, n \geq 1 \\[15pt]
             &\text{kun n = 1 :} \\
-            &\implies 4 * 1^2 - 1 \\
+            &\implies 8 * 1 - 5 = 4 * 1^2 - 1 = 3\\[15pt]
+            &\text{Oletetaan n = k} \\
+            &\implies 3 + 11 + ... + (8k - 5) = 4k^2 - k\\[15pt]
+            &\text{Todistetaan että väite pätee kun n = k + 1} \\
+            &3 + 11 + ... + (8k - 5) + [8(k + 1) - 5] = 4(k + 1)^2 - (k + 1)\\[15pt]
+            &\text{Vasen puoli:} \\
+            &S(k + 1) = S(k) + [8(k + 1) - 5]\\
+            &= 4(k^2 - k) + [8k + 8 - 5]\\
+            &= 4k^2 - 7k + 3\\[15pt]
+            &\text{Oikea puoli:} \\
+            &4(k + 1)^2 - (k + 1) = 4(k^2 +2k + 1)  - (k + 1) = 4k^2 + 8k + 4 - k - 1\\
+            &= 4k^2 + 7k + 3\\[15pt]
+            &\text{Koska perus askel ja induktio askel pätee voimme päätellä että se pätee kaikilla $n \in \mathbb{N}$, $n \geq 1$.} \\
         \end{aligned}
     \]
+
 \end{document}
