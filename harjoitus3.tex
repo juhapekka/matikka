@@ -81,8 +81,28 @@
         \end{itemize}
         $\implies$ on olemassa ainakin yksi pari  $(x, y) \in A \times A $, joille ei päde  $xRy$  eikä  $yRx$ joten $R$ ei ole vertailullinen.
         \item[(h)] $R$ on ekvivalenssirelaatio koska yllä on todettu että $R$ on refleksiivinen, symmetrinen ja transitiivinen.
-    \end{enumerate}	
+    \end{enumerate}
     
-
+    \newpage
+	\section*{Tehtävä 3}
+    Olkoot $R$ ja $S$ joukkojen $A$ ja $B$ välisiä relaatioita, toisin sanoen $R, S  \subset  A \times B$. Osoita, että
+    \begin{enumerate}
+        \item[(a)] $(R^{-1})^{-1} = R$ \newline
+        $R^{-1} = \{ (b, a) \in B \times A \mid (a, b) \in R \}$\newline
+        Käännetään relaatio $R^{-1}$:\newline
+        $(R^{-1})^{-1} = \{ (a, b) \in A \times B \mid (b, a) \in R^{-1} \}$\newline
+        Koska $(b, a) \in R^{-1}$ tarkoittaa $(a, b) \in R$\newline
+        $\implies (R^{-1})^{-1} = \{ (a, b) \in A \times B \mid (a, b) \in R \}$\newline
+        $\implies  (R^{-1})^{-1} = R$
+        \item[(b)] $(R \cup S)^{-1} = R^{-1} \cup S^{-1} $
+        \[
+            \begin{aligned}
+                (a,b) \in (R \cup S)^{-1} &\Longleftrightarrow (b,a) \in (R \cup S)\\
+                &\Longleftrightarrow (b,a) \in R \text{ tai } (b,a) \in S\\
+                &\Longleftrightarrow (a,b) \in R^{-1} \text{ tai } (a,b) \in S^{-1}\\
+                &\Longleftrightarrow (a,b) \in R^{-1} \cup S^{-1}\\
+            \end{aligned}
+        \]
+        \end{enumerate}
 
 \end{document}
