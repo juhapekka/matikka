@@ -105,4 +105,50 @@
         \]
         \end{enumerate}
 
+
+        \newpage
+        \section*{Tehtävä 4}
+        Määritellään kokonaislukujen joukossa $\mathbb{Z}$ relaatio $x \sim y \Longleftrightarrow x + y$ on parillinen luku. Osoita, että $\sim$ on ekvivalenssirelaatio.\newline
+        Osoitetaan (tehtävä 2h mukaisesti):
+        \begin{itemize}
+            \item[\textbf{1)}] Refleksiivisyys: Jokaisella $x \in \mathbb{Z}$ pätee $x \sim x$
+            \item[\textbf{2)}] Symmetrisyys: Jos $x \sim y$, niin $y \sim x$
+            \item[\textbf{3)}] Transitiivisuus: Jos $x \sim y$ ja $y \sim z$, niin $x \sim z$ 
+        \end{itemize}
+    
+        \begin{itemize}
+            \item[\textbf{1)}]
+            \[
+                \begin{aligned}
+                    x + x &= 2x\\
+                    &\implies 2x \text{ on jaollinen kahdella joten $x + x$  on parillinen luku} \\
+                    &\implies \text{Siis $x \sim x$ kaikilla } x \in \mathbb{Z} \\[5pt]
+                \end{aligned}
+            \]
+
+            \item[\textbf{2)}]
+            \begin{itemize}
+                \item Oletetaan, että $x \sim y$, silloin $x + y$ on parillinen
+                \item $x + y = 2k$ jollakin $k \in \mathbb{Z}$
+                \item $y + x = x + y = 2k$
+                \item Siis $y + x$ on parillinen, joten $y \sim x$
+            \end{itemize}
+
+            \item[\textbf{3)}]
+            \begin{itemize}
+                \item Oletetaan, että $x \sim y$ ja $y \sim z$, eli $x + y$ ja $y + z$ ovat parillisia lukuja
+                \item Tällöin on olemassa kokonaisluvut $k, m \in \mathbb{Z}$ siten
+                \begin{itemize}
+                    \item $x + y = 2k$
+                    \item $y + z = 2m$
+                \end{itemize}
+                \item Vähennetään toisistaan nämä yhtälöt:\newline
+                    $(x + y) - (y + z) = 2k - 2m$ \newline
+                    $x - z = 2(k - m)$
+                \item Tästä seuraa $x - z$ on parillinen luku jolloin $x$ ja $z$ ovat joko parillisia tai parittomia jolloin myös $x + z$ on parillinen
+                \item Näin ollen $x \sim z$
+            \end{itemize}
+        \end{itemize}
+        Koska relaatio $\sim$ on refleksiivinen, symmetrinen ja transitiivinen, se on ekvivalenssirelaatio
+
 \end{document}
