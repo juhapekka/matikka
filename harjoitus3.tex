@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{graphicx}
 \usepackage[finnish]{babel}
 
 \begin{document}
@@ -167,6 +168,70 @@
         \end{itemize}
         Koska  5  on pariton luku, se kuuluu parittomien lukujen ekvivalenssiluokkaan\newline
         $[5]_\sim = \{ x \in \mathbb{Z} \mid x \text{ on pariton} \}$
+
+
+        \newpage
+        \section*{Tehtävä 6}
+        Määritellään joukossa $[-3, 3] \times \mathbb{R}$ relaatio $xRy \Longleftrightarrow  y = |x|$. Osoita, että R on kuvaus.\newline
+        \linebreak
+        $[-3, 3] \times \mathbb{R} = \{(x,y) \mid x \in [-3,3], y \in \mathbb{R} \}$ Eli relaatio $R$ yhdistää $x \in [-3,3]$ ja $y \in \mathbb{R}$ vain jos y on x:n itseisarvo. \newline
+        Relaatio R on kuvaus jos jokaiselle $x \in [-3,3]$ löytyy vain yksi $y \in \mathbb{R}$\newline
+        \linebreak
+        Koska $|x|$ on yksikäsitteinen jokaiselle $|x|$ löytyy täsmälleen yksi $y$.
+        \linebreak
+
+        \begin{description}
+            \item[{\textbf{Määriteltyys: Annettu} $x \in [-3, 3]$}]\quad
+            \begin{itemize}
+                \item Itseisarvo $|x|$ on aina määritelty reaalilukuna.
+                \item Siis $y = |x| \in \mathbb{R}$
+                \item Eli $(x, y) \in R$, joten $R$ on määritelty kaikilla $x \in [-3, 3]$
+            \end{itemize}
+            \item[{\textbf{Yksikäsitteisyys: Annettu} $x \in [-3, 3]$}]\quad
+            \begin{itemize}
+                \item $y = |x|$ on ainoa arvo joka toteuttaa ehdon $y = |x|$.
+            \end{itemize}            
+        \end{description}
+        \text{Näin ollen $R$ on kuvaus.}
+        \linebreak
+        \linebreak
+        \textbf{a) Funktion $f(x) = |x|$ kuvaaja}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{image.png}
+        \end{center}
+
+        \textbf{b)}
+        \begin{itemize}
+            \item Lähtöjoukko $x \in [-3, 3]$
+            \item Maalijoukko on kaikki reaaliluvut koska $f: [-3, 3] \to \mathbb{R}$
+            \item Arvojoukko on $[0, 3]$ koska $x$ käy läpi lähtöjoukon $[-3, 3]$ ja $f(x) = |x|$ 
+        \end{itemize}
+\pagebreak
+        \section*{Tehtävä 6}
+        \quad
+
+        \textbf{c)}
+        \begin{itemize}
+            \item joukon $[-1, 2]$ kuva kun $f(x) = |x|$ muuntaa kaikki $x \in [-1, 2]$ arvot välille $[0, 2] \implies [0, 2]$
+            \item joukon $[-1, 2]$ alkukuva kun $f(x) = |x|, x \in [-3, 3]$, joille $|x| \leq 2$, mikä toteutuu välillä $x \in [-2, 2] \implies [-2, 2]$
+        \end{itemize}
+
+        \textbf{d)}
+        Onko kuvauksen $f : [-3, 3] \rightarrow $ käänteisrelaatio $f^-1$ kuvaus?
+        \begin{itemize}
+        \item Koska $y = |x|$, niin mahdolliset $x$ ovat:
+            \begin{itemize}
+                \item $x = y$
+                \item $x = -y$
+            \end{itemize}
+        \item Esimerkiksi:
+            \begin{itemize}
+                \item jos $y$ = 2 $\implies x = 2$ tai $x = -2$
+                \item jos $y$ = 0 $\implies vain yksi ratkaisu x = 0$
+            \end{itemize}
+        \end{itemize}
+        Eli kuvauksen $f : [-3, 3] \rightarrow $ käänteisrelaatio $f^-1$ ei ole kuvaus koska monilla arvoilla $y$ on useampi kuin yksi $x$ arvo joka täyttää ehdon $y = |x|$
+        
 
 
 \end{document}
