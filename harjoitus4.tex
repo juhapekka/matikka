@@ -88,6 +88,76 @@
     \newpage
     \stepcounter{tehtava}
 	\section*{Tehtävä \thetehtava}
+    Olkoot $X = {1, 2, 3}$ ja $Y = {1, 2}$. Keksi kuvaus $X \rightarrow  Y$ tai $Y \rightarrow X$ tai $X \rightarrow X$ tai $Y \rightarrow Y$, joka
+    \begin{itemize}
+        \item[a)] on injektio, mutta ei ole surjektio\newline
+        $Y \rightarrow X$ \newline
+            \begin{tikzpicture}
+                % Nodes for set Y
+                \node (Y1) at (0,2) {1};
+                \node (Y2) at (0,1) {2};
+            
+                % Nodes for set X
+                \node (X1) at (3,2) {1};
+                \node (X2) at (3,1) {2};
+                \node (X3) at (3,0) {3};
+            
+                % Arrows
+                \draw[->] (Y1) -- (X1);
+                \draw[->] (Y2) -- (X2);
+            \end{tikzpicture}
+            \item[b)] on surjektio, mutta ei ole injektio,\newline
+        $X \rightarrow Y$ \newline
+            \begin{tikzpicture}
+                % Nodes for set Y
+                \node (Y1) at (0,3) {1};
+                \node (Y2) at (0,2) {2};
+                \node (Y3) at (0,1) {3};
+            
+                % Nodes for set X
+                \node (X1) at (3,3) {1};
+                \node (X2) at (3,2) {2};
+            
+                % Arrows
+                \draw[->] (Y1) -- (X1);
+                \draw[->] (Y2) -- (X2);
+                \draw[->] (Y3) -- (X2);
+            \end{tikzpicture}
+            \item[c)] ei ole surjektio eikä injektio,\newline
+        $X \rightarrow Y$ \newline
+            \begin{tikzpicture}
+                % Nodes for set Y
+                \node (Y1) at (0,3) {1};
+                \node (Y2) at (0,2) {2};
+                \node (Y3) at (0,1) {3};
 
+                % Nodes for set X
+                \node (X1) at (3,3) {1};
+                \node (X2) at (3,2) {2};
+
+                % Arrows
+                \draw[->] (Y1) -- (X1);
+                \draw[->] (Y2) -- (X1);
+            \end{tikzpicture}
+            \item[d)] on bijektio,\newline
+        $Y \rightarrow Y$ \newline
+            \begin{tikzpicture}
+                % Nodes for set Y
+                \node (Y1) at (0,2) {1};
+                \node (Y2) at (0,1) {2};
+            
+                % Nodes for set X
+                \node (X1) at (3,2) {1};
+                \node (X2) at (3,1) {2};
+            
+                % Arrows
+                \draw[->] (Y1) -- (X1);
+                \draw[->] (Y2) -- (X2);
+            \end{tikzpicture}
+        \end{itemize}
+
+        \newpage
+        \stepcounter{tehtava}
+        \section*{Tehtävä \thetehtava}
     
 \end{document}
