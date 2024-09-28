@@ -214,5 +214,20 @@
     \newpage
     \stepcounter{tehtava}
     \section*{Tehtävä \thetehtava}
-    
+    Olkoot $f, g: \mathbb{R} \rightarrow \mathbb{R}, f(x) = x^3 + 1$ ja $g(x) = x^2$
+    \begin{itemize}
+        \item[a)] Määritä funkion $f$ käänteisfunktio $f^{-1}:\mathbb{R} \rightarrow \mathbb{R}$, jos se on olemassa.\newline
+        Todistaan siis $f^{-1} (f(x)) = x$
+        \begin{itemize}
+            \item lähtökohtanan $y = f(x) = x^3 + 1$ jolloin ratkaistaan $x$ yhtälöstä $y = x^3 + 1$
+            \item \[y = x^3 + 1 \quad \implies \quad y - 1 = x^3 \quad \implies \quad x = \sqrt[3]{y - 1} \]
+            \item Johtopäätös $f^{-1}(y) = \sqrt[3]{y - 1}$
+        \end{itemize}
+        Joten funktion $f(x) = x^3 + 1$ käänteisfunktio on: $f^{-1}(x) = \sqrt[3]{x - 1}$\newline
+        1. todistus: $f^{-1}(f(x)) = x$: \newline
+        $f^{-1}(f(x)) = f^{-1}(x^3 + 1) = \sqrt[3]{(x^3 + 1) - 1} = \sqrt[3]{x^3} = x$\newline
+        2. todistus: $f(f^{-1}(x)) = x$ :\newline
+        $f(f^{-1}(x)) = f\left(\sqrt[3]{x - 1}\right) = \left(\sqrt[3]{x - 1}\right)^3 + 1 = (x - 1) + 1 = x$
+
+    \end{itemize}
 \end{document}
