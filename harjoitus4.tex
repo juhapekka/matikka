@@ -270,4 +270,47 @@
     \stepcounter{tehtava}
     \section*{Tehtävä \thetehtava}
 
+    Etsi sellaiset ei-identtiset kuvaukset (funktiot)
+    \begin{itemize}
+        \item[\textbf{a)}] $f : \mathbb{R} \rightarrow \mathbb{R}$, että $(f \circ id_\mathbb{R})(x) = -2x$ kaikilla x $\in \mathbb{R}$
+        \[
+            \begin{aligned}
+                (f \circ id_{\mathbb{R}})(x) &= f(id_{\mathbb{R}}(x)) = f(x) \\
+                \implies & f(x) = -2x
+            \end{aligned}
+        \]
+
+        \item[\textbf{b)}] $g, h: \mathbb{R} \rightarrow \mathbb{R}$, että $(h \circ g)(x) = 3x^2 + 1$ kaikilla $x \in \mathbb{R}$\newline
+        Eli $h(g(x)) = 3x^2 + 1$
+        \begin{itemize}
+            \item Oletetaan jokin funktio $g(x)$. Koska oikealla puolella on termi $3x^2$, lähdemme oletuksesta, että $g(x) = x^2$.
+            \item Ratkaistaan $h(x)$:
+            \[
+                \begin{aligned}
+                    h(g(x)) = & \  h(x^2)\\
+                    \implies h(g(x)) = & \ 3x^2 + 1\\
+                    = h(x^2) = & \ 3x^2 + 1 \quad \mid \text{eli $h(y)$, kun $y = x^2$ on $h(y) = 3y + 1$} \\
+                    \implies & h(x) = 3x + 1                                        
+                \end{aligned}
+            \]
+            \item Yhdistetty funktio tarkistus:\newline
+            Yhdistetään funktiot $h(g(x))$\newline
+            $h(g(x)) = h(x^2) = 3x^2 + 1$
+            \item Eli löysimme funktiot:
+            \begin{itemize}
+                \item $g(x) = x^2$
+                \item $h(x) = 3x + 1$
+            \end{itemize}
+            Jotka täyttävät ehdon $(h \circ g)(x) = 3x^2 + 1$
+
+            
+        \end{itemize}
+
+
+
+        \item[\textbf{c)}] $j, k, l : \mathbb{R} \rightarrow \mathbb{R}$, että $(l \circ (k \circ j))(x) = e^{sin |x|}$ kaikilla $x \in \mathbb{R}$
+
+        \item[\textbf{d)}] Totea kohdassa (c), että myös $((l \circ k) \circ j)(x) = e^{sin |x|}$ kaikilla $x \in \mathbb{R}$
+    \end{itemize}
+
 \end{document}
