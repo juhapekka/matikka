@@ -234,6 +234,40 @@
             \item $y = x^2 \implies x = \pm \sqrt{y}$
             \item funktio $g(x) = x^2$ ei ole yksikäsitteinen koko $\mathbb{R}$:ssä, se ei ole käännettävissä.
         \end{itemize}
-
     \end{itemize}
+
+    \newpage
+    \stepcounter{tehtava}
+    \section*{Tehtävä \thetehtava}
+    Jatkoa tehtävään 4. Määritä yhdistetyt funktiot $f \circ g$ ja $g \circ f$. Onko $f \circ g = g \circ f$?
+    \begin{itemize}
+        \item[]$f \circ g$ eli $f(g(x))$
+            \[
+                \begin{aligned}
+                    (f \circ g)(x) &= f(g(x)) = f(x^2) \\
+                    \implies f(g(x)) &= (x^2)^3 + 1 = x^6 + 1 \\
+                    \implies f \circ g &= x^6 + 1
+                \end{aligned}
+            \]
+        \item[]$g \circ f$ eli $g(f(x))$
+                \[
+                    \begin{aligned}
+                        (g \circ f)(x) &= g(f(x)) = g(x^3 + 1) \\
+                        \implies g(f(x)) &= (x^3 + 1)^2 = x^6 + 2x^3 + 1 \\
+                        \implies g \circ f &= (x^3 + 1)^2 = x^6 + 2x^3 + 1                        
+                    \end{aligned}
+                \]
+    \end{itemize}
+    Nyt meillä on seuraavat funktiot yhdistämisen tuloksena
+    \begin{itemize}
+        \item $f \circ g = x^6 + 1$
+        \item $g \circ f = x^6 + 2x^3 + 1$
+    \end{itemize}
+    Mistä on helppo nähdä $f \circ g \neq g \circ f$
+
+
+    \newpage
+    \stepcounter{tehtava}
+    \section*{Tehtävä \thetehtava}
+
 \end{document}
