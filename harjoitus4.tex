@@ -309,8 +309,25 @@
 
 
         \item[\textbf{c)}] $j, k, l : \mathbb{R} \rightarrow \mathbb{R}$, että $(l \circ (k \circ j))(x) = e^{sin |x|}$ kaikilla $x \in \mathbb{R}$
-
+        \begin{itemize}
+            \item Aloitetaan sisimmästä functiosta $j(x)$. Koska oikealla on lauseke $|x|$ voidaan olettaa $j(x) = |x|$
+            \item Seuraavaksi $k(x)$. $j(x) = |x|$, joten $(k \circ j)(x) = k(|x|)$. Voidaan olettaa $k(x) = \sin(x)$ josta sauraa $(k \circ j)(x) = \sin(|x|)$
+            \item Lopuksi $l(x)$. Meillä on $(k \circ j)(x) = \sin(|x|)$ ja tiedämme että $l$ nostaa tämän exponenttiin joten $l(x) = e^x$. Tällöin $(l \circ (k \circ j))(x) = e^{\sin |x|}$, mikä oli ehto.
+            \item Yhdistetään yllä olevat tulokset $(l \circ (k \circ j))(x) = l(k(j(x))) = l(\sin(|x|)) = e^{\sin |x|}$ ja nähdään että ehto täyttyy.
+            \item Eli:
+            \begin{itemize}
+                \item $j(x) = |x|$
+                \item $k(x) = \sin(x)$
+                \item $l(x) = e^x$
+            \end{itemize}
+        \end{itemize}
+\pagebreak
         \item[\textbf{d)}] Totea kohdassa (c), että myös $((l \circ k) \circ j)(x) = e^{sin |x|}$ kaikilla $x \in \mathbb{R}$
-    \end{itemize}
+        \begin{itemize}
+            \item $(l \circ k)(x) = l(k(x)) = l(\sin(x)) = e^{\sin(x)}$
+            \item sovelletaan $j(x) = |x|$ ja saadaan $((l \circ k) \circ j)(x) = (l \circ k)(j(x)) = e^{\sin(|x|)}$
+        \end{itemize}
+        Siis $(l \circ (k \circ j))(x) = e^{\sin |x|}$ ja $((l \circ k) \circ j)(x) = e^{\sin |x|}$ tuottavat saman tuloksen.
+\end{itemize}
 
 \end{document}
