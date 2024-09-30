@@ -165,14 +165,14 @@
             \item[a)] $f : \mathbb{N} \rightarrow \mathbb{N}, \ f(x) = x^2$\newline
             \textbf{injektio:}
             \begin{itemize}
-                \item Oletetaan, että $f(x_1) = f(x_2)$, siis $x_1^2 = x_2^2$.
-                \item joukossa $\mathbb{N}$ tämä tarkoittaa, että $x_1 = x_2$. Toisin sanoen, jos kahdella eri luonnollisella luvulla olisi sama kuva $f(x_1) = f(x_2)$, niin täytyisi olla $x_1 = x_2$, koska neliöjuuri on yksikäsitteinen luonnollisilla luvuilla.
+                \item Oletetaan $f(x_1) = f(x_2)$ eli $x_1^2 = x_2^2$
+                \item joukossa $\mathbb{N}$ tämä tarkoittaa, että $x_1 = x_2$. Ts. jos kahdella eri luonnollisella luvulla olisi sama kuva $f(x_1) = f(x_2)$ niin täytyy olla $x_1 = x_2$ koska neliöjuuri on yksikäsitteinen luonnollisilla luvuilla.
             \end{itemize}
             \textbf{Kuvaus on injektio koska eri luonnollisilla luvuilla on eri neliöt.}\linebreak
             \textbf{surjektio:}
             \begin{itemize}
-                \item Kuvaus $f(x) = x^2$ tuottaa vain neliölukuja joukossa $\mathbb{N}$. Neliölukuja ovat luvut kuten 1, 4, 9, 16, 25, \dots
-                \item On kuitenkin olemassa monia luonnollisia lukuja, jotka eivät ole minkään luonnollisen luvun neliöitä. Esimerkiksi lukuja \( 2, 3, 5, \dots\)
+                \item Kuvaus $f(x) = x^2$ tuottaa vain neliölukuja joukossa $\mathbb{N}$ kuten 1, 4, 9, 16, 25, \dots
+                \item On olemassa luonnollisia lukuja jotka eivät ole minkään luonnollisen luvun neliöitä. Esimerkiksi lukuja \( 2, 3, 5, \dots\)
                 \item Koska näillä luvuilla ei ole vastinetta lähtöjoukossa $\mathbb{N}$, kuvaus ei kata koko tulokuvan $\mathbb{N}$:ää
             \end{itemize}
             \textbf{Kuvaus ei ole surjektio koska kaikki luonnolliset luvut eivät ole neliölukuja}\linebreak
@@ -182,7 +182,7 @@
             \item[b)] $g : \mathbb{Z} \rightarrow \mathbb{Z}, \ g(x) = |x|$\newline
             \textbf{injektio:}
             \begin{itemize}
-                \item Koska $g(x) = |x|$ on itseisarvokuvaus, se hukkaa luvun etumerkin. Esimerkiksi $g(7) = 7$ ja $g(-7) = 7$, eli $g(7) = g(-7)$
+                \item Koska $g(x) = |x|$ on itseisarvokuvaus se hukkaa luvun etumerkin. Esimerkiksi $g(7) = 7$ ja $g(-7) = 7$, eli $g(7) = g(-7)$
             \end{itemize}
             \textbf{Kuvaus ei ole injektio, koska lähtöjoukon eri alkiot voivat kuvautua samaan tulokuvan alkioon.}\newline
             \textbf{surjektio:}
@@ -196,14 +196,14 @@
             \item[c)] $h : \mathbb{R} \rightarrow \mathbb{R}, \ h(x) = x + 1$\newline
             \textbf{injektio:}
             \begin{itemize}
-                \item $h(x_1) = h(x_2)$, tämä tarkoittaa, että $x_1 + 1 = x_2 + 1$
-                \item Vähentämällä molemmilta puolilta luvun 1, saadaan $x_1 = x_2$
+                \item $h(x_1) = h(x_2)$, tämä tarkoittaa että $x_1 + 1 = x_2 + 1$
+                \item Vähentämällä molemmilta puolilta luvun 1 saadaan $x_1 = x_2$
             \end{itemize}
             \textbf{Kuvaus on injektio koska jos kahdella alkioilla on sama kuva niiden täytyy olla samoja alkioita}\newline
             \textbf{surjektio:}
             \begin{itemize}
-                \item valitaan mikä tahansa $y \in \mathbb{R}$, meidän täytyy löytää $x \in \mathbb{R}$ siten, että $h(x) = y$, eli $x + 1 = y$
-                \item Ratkaistaan $x$ yhtälöstä: $x = y - 1$
+                \item valitaan mikä tahansa $y \in \mathbb{R}$, täytyy löytyä $x \in \mathbb{R}$ siten että $h(x) = y$, eli $x + 1 = y$
+                \item $\implies x = y - 1$
                 \item $x = y - 1$ kuuluu aina joukkoon $\mathbb{R}$
             \end{itemize}
             \textbf{Kuvaus on surjektio koska kaikilla $y \in \mathbb{R}$ on olemassa vastine lähtöjoukossa}\newline
@@ -221,7 +221,7 @@
         \begin{itemize}
             \item lähtökohtanan $y = f(x) = x^3 + 1$ jolloin ratkaistaan $x$ yhtälöstä $y = x^3 + 1$
             \item \[y = x^3 + 1 \quad \implies \quad y - 1 = x^3 \quad \implies \quad x = \sqrt[3]{y - 1} \]
-            \item Johtopäätös $f^{-1}(y) = \sqrt[3]{y - 1}$
+            \item Siis $f^{-1}(y) = \sqrt[3]{y - 1}$
         \end{itemize}
         Joten funktion $f(x) = x^3 + 1$ käänteisfunktio on: $f^{-1}(x) = \sqrt[3]{x - 1}$\newline
         1. todistus: $f^{-1}(f(x)) = x$: \newline
@@ -283,7 +283,7 @@
         \item[\textbf{b)}] $g, h: \mathbb{R} \rightarrow \mathbb{R}$, että $(h \circ g)(x) = 3x^2 + 1$ kaikilla $x \in \mathbb{R}$\newline
         Eli $h(g(x)) = 3x^2 + 1$
         \begin{itemize}
-            \item Oletetaan jokin funktio $g(x)$. Koska oikealla puolella on termi $3x^2$, lähdemme oletuksesta, että $g(x) = x^2$.
+            \item Oletetaan jokin funktio $g(x)$. Koska oikealla puolella on termi $3x^2$, oletetaan $g(x) = x^2$.
             \item Ratkaistaan $h(x)$:
             \[
                 \begin{aligned}
@@ -310,9 +310,9 @@
 
         \item[\textbf{c)}] $j, k, l : \mathbb{R} \rightarrow \mathbb{R}$, että $(l \circ (k \circ j))(x) = e^{sin |x|}$ kaikilla $x \in \mathbb{R}$
         \begin{itemize}
-            \item Aloitetaan sisimmästä functiosta $j(x)$. Koska oikealla on lauseke $|x|$ voidaan olettaa $j(x) = |x|$
-            \item Seuraavaksi $k(x)$. $j(x) = |x|$, joten $(k \circ j)(x) = k(|x|)$. Voidaan olettaa $k(x) = \sin(x)$ josta sauraa $(k \circ j)(x) = \sin(|x|)$
-            \item Lopuksi $l(x)$. Meillä on $(k \circ j)(x) = \sin(|x|)$ ja tiedämme että $l$ nostaa tämän exponenttiin joten $l(x) = e^x$. Tällöin $(l \circ (k \circ j))(x) = e^{\sin |x|}$, mikä oli ehto.
+            \item Aloitetaan sisimmästä funktiosta $j(x)$. Koska oikealla on lauseke $|x|$ oletetaan $j(x) = |x|$
+            \item Seuraavaksi $k(x)$. $j(x) = |x|$, joten $(k \circ j)(x) = k(|x|)$. oletetaan $k(x) = \sin(x)$ josta sauraa $(k \circ j)(x) = \sin(|x|)$
+            \item Lopuksi $l(x)$. Meillä on jo $(k \circ j)(x) = \sin(|x|)$ ja tiedämme että $l$ nostaa tämän exponenttiin joten $l(x) = e^x$. Tällöin $(l \circ (k \circ j))(x) = e^{\sin |x|}$, mikä oli ehto.
             \item Yhdistetään yllä olevat tulokset $(l \circ (k \circ j))(x) = l(k(j(x))) = l(\sin(|x|)) = e^{\sin |x|}$ ja nähdään että ehto täyttyy.
             \item Eli:
             \begin{itemize}
