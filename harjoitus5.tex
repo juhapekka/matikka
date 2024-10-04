@@ -135,5 +135,56 @@ Olkoon
 \newpage
 \stepcounter{tehtava}
 \section*{Tehtävä \thetehtava}
+Olkoot $A$, $B$ ja $C$ äärellisiä joukkoja. Osoita, että \newline
+$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$\newline
+\[
+    \begin{aligned}
+        \text{Havainnollista tulosta joukoilla} \\
+        A &= {1, 2, 3, 4, 5, 6, 7, 8}\\
+        B &= {4, 7, 8, 9, 10, 11, 12, 13}\\
+        C &= {5, 6, 7, 8, 11, 12, 13, 14, 15}\\
+    \end{aligned}
+\]
+
+\begin{itemize}
+    \item[1)] Otetaan ensin $|A| + |B| + |C|$ Tämä sisältää kuitenkin päällekkäisyyksiä: alkiot, jotka kuuluvat useampaan kuin yhteen joukkoon, lasketaan useita kertoja.
+    \item[2)] Korjataan päällekkäisyydet vähentämällä parittaiset leikkaukset:
+    \begin{itemize}
+        \item $|A \cap B|$ Alkiot, jotka ovat sekä $A$ että $B$
+        \item $|A \cap C|$ Alkiot, jotka ovat sekä $A$ että $C$
+        \item $|B \cap C|$ Alkiot, jotka ovat sekä $B$ että $C$
+    \end{itemize}
+    \item[3)] Lisätään takaisin kolmen joukon yhteinen leikkaus\newline
+    Alkiot, jotka kuuluvat kaikkiin kolmeen joukkoon $A \cap B \cap C$, on tähän mennessä ensin laskettu kolmesti ja sitten vähennetty kolmesti, joten niiden nettomäärä on nolla.\newline
+    Koska nämä alkiot pitäisi laskea kerran, lisäämme $|A \cap B \cap C|$ takaisin:
+    $|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$
+\end{itemize}
+\pagebreak
+\paragraph*{Havainnollistus}
+\[
+    \begin{aligned}
+        |A| &= 8 \ (\text{alkiot:} 1, 2, 3, 4, 5, 6, 7, 8)\\
+        |B| &= 8 \ (\text{alkiot:} 4, 7, 8, 9, 10, 11, 12, 13)\\
+        |C| &= 9 \ (\text{alkiot:} 5, 6, 7, 8, 11, 12, 13, 14, 15)
+    \end{aligned}
+\]
+\begin{itemize}
+    \item $A \cap B = \{4, 7, 8\} \quad \mid$ 3 alkiota
+    \item $A \cap C = \{5, 6, 7, 8\} \quad \mid$ 4 alkiota
+    \item $B \cap C = \{7, 8, 11, 12, 13\} \quad \mid$ 5 alkiota
+    \item $A \cap B \cap C = \{7, 8\} \quad \mid$ 2 alkiota
+    \item $A \cup B \cup C = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\} \quad \mid$ \textbf{15 alkiota}
+\end{itemize}
+\textbf{Sovelletaan kaavaa:}
+\[
+\begin{aligned}
+    |A \cup B \cup C| &= |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C| \\
+    &= 8 + 8 + 9 - 3 - 4 - 5 + 2 \\
+    &= (8 + 8 + 9) - (3 + 4 + 5) + 2 \\
+    &= 25 - 12 + 2 \\
+    &= 15
+\end{aligned}
+\]    
+\textbf{Eli alkioiden määrä täsmää.}
 
 \end{document}
