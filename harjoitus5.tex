@@ -187,4 +187,47 @@ $|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A
 \]    
 \textbf{Eli alkioiden määrä täsmää.}
 
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+Todista suljettujen reaalilukuvälien yhtä mahtavuus osoittamalla, että suljetut välit $[0, a]$ ja
+$[0, b]$ ovat yhtä mahtavia, kun $a, b > 0$. Vihje: Tutki kuvausta $f : [0, a] \rightarrow [0, b], f(x) = bx/a$
+\newline
+\paragraph*{Vihje}
+kuvaus $f : [0, a] \rightarrow [0, b]$ missä $f(x) = \frac{b}{a}x$, tämä funktio skaalaa välin $[0, a]$ välille $[0, b]$
+
+\paragraph*{Todistus}
+\begin{itemize}
+    \item[\textbf{Injektio}] Jos $x_1 \neq x_2$, niin $f(x_1) \neq f(x_2)$\newline
+    Oletetaan, että $x_1, x_2 \in [0, a]$ ja $x_1 \neq x_2$\newline
+    $f(x_1) = \frac{b}{a}x_1, \quad f(x_2) = \frac{b}{a}x_2$\newline
+    Jos $x_1 \neq x_2$, niin koska $\frac{b}{a} \neq 0$, seuraa että $f(x_1) \neq f(x_2)$. Siksi $f$ on injektio.
+    \item[\textbf{Surjektio}] Jokaiselle $y \in [0, b]$ löytyy $x \in [0, a]$ siten, että $f(x) = y$.\newline
+    Olkoon $y \in [0, b]$. Tarvitsee löytää $x \in [0, a]$ siten, että\newline
+    $f(x) = \frac{b}{a}x = y$\newline
+    \newline
+    Ratkaistaan $x$:\newline
+    $x = \frac{a}{b}y$\newline
+    Koska $y \in [0, b]$ ja $a, b > 0$, niin $y \geq 0$ ja $y \leq b$. Sijoitetaan nämä arvot $x$-yhtälöön
+    \begin{itemize}
+        \item Kun $y = 0$:
+        \[
+        x = \frac{a}{b} \times 0 = 0 \in [0, a]
+        \]
+        \item Kun $y = b$:
+        \[
+        x = \frac{a}{b} \times b = a \in [0, a]
+        \]
+    \end{itemize}
+    $\implies$ Koska $y$ liikkuu välillä $[0, b]$, niin $x = \frac{a}{b}y$ liikkuu välillä $[0, a]$\newline
+    Näin ollen jokaiselle  $y \in [0, b]$ löytyy $x = \frac{a}{b}y \in [0, a]$, joten $f$ on surjektio.\newline
+    \newline
+    Koska $f$ on sekä injektio että surjektio, se on bijektio. Tällöin välit $[0, a]$ ja $[0, b]$ ovat yhtä mahtavia.
+\end{itemize}
+
+
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+
 \end{document}
