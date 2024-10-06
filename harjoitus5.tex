@@ -53,32 +53,36 @@ Olkoon
 
 \begin{itemize}
     \item[\textbf{a)}] Kuinka moni henkilöistä harrastaa juoksua mutta ei uintia eikä pyöräilyä?
-    \begin{tikzpicture}
-        % Määritellään ympyröiden keskipisteet ja säde
-        \coordinate (U) at (-1,0); % Uinnin keskipiste
-        \coordinate (P) at (1,0);  % Pyöräilyn keskipiste
-        \coordinate (J) at (0,1.5);    % Juoksun keskipiste
-        \def\R{1.5}                  % Ympyröiden säde
+    % \begin{tikzpicture}
+    %     % Määritellään ympyröiden keskipisteet ja säde
+    %     \coordinate (U) at (-1,0); % Uinnin keskipiste
+    %     \coordinate (P) at (1,0);  % Pyöräilyn keskipiste
+    %     \coordinate (J) at (0,1.5);    % Juoksun keskipiste
+    %     \def\R{1.5}                  % Ympyröiden säde
         
-        % Varjostetaan alue J \ (U ∪ P)
-        \begin{scope}
-          \clip (J) circle (\R);             % Rajataan alue juoksun ympyrään
-          \fill[yellow] (-4,-4) rectangle (4,4); % Täytetään koko alue keltaisella
-          \fill[white] (U) circle (\R);      % Poistetaan uinnin ympyrän alue
-          \fill[white] (P) circle (\R);      % Poistetaan pyöräilyn ympyrän alue
-        \end{scope}
+    %     % Varjostetaan alue J \ (U ∪ P)
+    %     \begin{scope}
+    %       \clip (J) circle (\R);             % Rajataan alue juoksun ympyrään
+    %       \fill[yellow] (-4,-4) rectangle (4,4); % Täytetään koko alue keltaisella
+    %       \fill[white] (U) circle (\R);      % Poistetaan uinnin ympyrän alue
+    %       \fill[white] (P) circle (\R);      % Poistetaan pyöräilyn ympyrän alue
+    %     \end{scope}
         
-        % Piirretään ympyrät uudelleen, jotta reunat näkyvät selvästi
-        \draw (U) circle (\R) node[left] {$U$};
-        \draw (P) circle (\R) node[right] {$P$};
-        \draw (J) circle (\R) node[above] {$J$};
+    %     % Piirretään ympyrät uudelleen, jotta reunat näkyvät selvästi
+    %     \draw (U) circle (\R) node[left] {$U$};
+    %     \draw (P) circle (\R) node[right] {$P$};
+    %     \draw (J) circle (\R) node[above] {$J$};
         
-        % Halutessasi voit lisätä alueiden numeeriset arvot tai merkinnät
-        % Esimerkiksi:
-        % \node at (-2,0) {$a$};
-        % \node at (2,0) {$b$};
-        % \node at (0,3) {$c$};
-      \end{tikzpicture}
+    %     % Halutessasi voit lisätä alueiden numeeriset arvot tai merkinnät
+    %     % Esimerkiksi:
+    %     % \node at (-2,0) {$a$};
+    %     % \node at (2,0) {$b$};
+    %     % \node at (0,3) {$c$};
+    %   \end{tikzpicture}
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{harj5teht1venn.jpg}
+    \end{center}
+    
       Eli tarkoitus on löytää $|J \setminus (U \cup P)|$
       \begin{itemize}
         \item[1.] $|(J \cap U) \setminus P| = |U \cap J| - |U \cap P \cap J| = 27 - 10 = 17$
@@ -258,4 +262,52 @@ a_1 z_2 + a_2 z_1 = z_2 \implies (a_1 - 1) z_2 + a_2 z_1 = 0
 \]
 Siis neurtaali alkio $a$ on $(1, 0)$
 
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+Tarkastellaan kompleksilukuja $z = (3, -4)$ ja $w = (-1, 2)$.
+\begin{itemize}
+    \item[\textbf{a)}] Esitä $z$ ja $w$ imaginaariyksikön avulla muodossa $x + iy$.
+    \[
+    \begin{aligned}
+        z &= 3 - 4i \\
+        w &= -1 + 2i
+    \end{aligned}
+    \]
+    \item[\textbf{b)}] Mikä on kompleksiluvun $z$ liittoluku?
+    \[
+    \begin{aligned}
+        \overline{z} = 3 + 4i
+    \end{aligned}
+    \]
+    \item[\textbf{c)}] Mikä on kompleksiluvun $w$ vastaluku?
+    \[
+    \begin{aligned}
+        -w = 1 - 2i
+    \end{aligned}
+    \]
+    \item[\textbf{d)}] Laske kompleksilukujen $z$ ja $w$ summa ja erotus.
+    \[
+    \begin{aligned}
+        z + w &= 2 - 2i \\
+        z - w &= 4 - 6i
+    \end{aligned}
+    \]
+    \item[\textbf{e)}] Mikä on kompleksiluvun $z$ itseisarvo eli moduli?
+    \[
+    \begin{aligned}
+        |z| = \sqrt{3^2 + (-4)^2} = 5
+    \end{aligned}
+    \]
+\end{itemize}
+Esitä määrittämäsi kompleksiluvut piirtämällä niitä vastaavat kompleksitason pisteet koordinaatistoon.
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{harj5teht5.jpg}
+\end{center}
+
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+Olen ilmoittautunut lopputenttiin.
 \end{document}
