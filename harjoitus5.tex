@@ -229,5 +229,33 @@ kuvaus $f : [0, a] \rightarrow [0, b]$ missä $f(x) = \frac{b}{a}x$, tämä funk
 \newpage
 \stepcounter{tehtava}
 \section*{Tehtävä \thetehtava}
+Osoita, että kompleksilukujen kertolasku on vaihdannainen eli $z \cdot w = w \cdot z$ kaikilla $z, w \in \mathbb{C}$. Mikä on kompleksilukujen kertolaskun neutraalialkio eli sellainen kompleksiluku $a$, jolla $a \cdot z = z \cdot a = z$ kaikilla $z \in \mathbb{C}$?\newline
+\linebreak
+Olkoon $(z_1, z_2)$ ja $(w_1, w_2)$ kompleksilukuja, siis reaalilukupareja.\newline
+Tällöin $(z_1, z_2) \times (w_1, w_2) = (z_1 * w_1 - z_2 * w_2) + (z_1 * w_2 + z_2 * w_1)i$\newline
+\linebreak
+Toisaalta $(w_1, w_2) \times (z_1, z_2) = (w_1 * z_1 - w_2 * z_2) + (w_1 * z_2 + w_2 * z_1)i$\newline
+\linebreak
+Koska kertolasku on vaihdannainen, ts. esimerkiksi $w_1 * z_1 = z_1 * w_1$, nähdään $z \cdot w = w \cdot z$ kaikilla $z, w \in \mathbb{C}$\newline
+\linebreak
+\textbf{Kertolaskun neutraalialkio:}\newline
+Eli etsitään kompleksilukua $a = (a_1, a_2)$ jossa $a_1, a_2 \in \mathbb{R}$ siten että $a \cdot z = z$\newline
+Sijoitetaan tämä kertolaskun määritelmään:\newline
+$a \cdot z = \left( a_1 z_1 - a_2 z_2, \ a_1 z_2 + a_2 z_1 \right) = (z_1, z_2)$\newline
+\linebreak
+Tämä johtaa kahteen yhtälöön:
+\begin{itemize}
+    \item $a_1 z_1 - a_2 z_2 = z_1$
+    \item $a_1 z_2 + a_2 z_1 = z_2$
+\end{itemize}
+Tästä nähdään ainoat mahdolliset $a_1, a_2$ ovat $a_1 = 1$ ja $a_2 = 0$ koska reaaliosalle
+\[
+a_1 z_1 - a_2 z_2 = z_1 \implies (a_1 - 1) z_1 - a_2 z_2 = 0
+\]
+ja imaginaari osalle
+\[
+a_1 z_2 + a_2 z_1 = z_2 \implies (a_1 - 1) z_2 + a_2 z_1 = 0
+\]
+Siis neurtaali alkio $a$ on $(1, 0)$
 
 \end{document}
