@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage[finnish]{babel}
+\usepackage{fancyhdr}
+\usepackage{pgf,tikz}
+
+
+\pagestyle{fancy}
+
+\newcounter{tehtava}
+\setcounter{tehtava}{1}
+
+
+\fancyhf{}
+\fancyhead[L]{Tehtävä \thetehtava}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{Tehtävä \thetehtava}
+}
+
+\begin{document}
+    \thispagestyle{plain}
+	\title{MAT11001 - Harjoitus 6}
+	\date{}
+	\maketitle
+	
+	
+	\section*{Tehtävä \thetehtava}
+    Jatkoa harjoituksen 5 tehtävään 5. Tarkastellaan siis kompleksilukuja $z = (3, -4)$ ja $w =(-1, 2)$
+    \begin{itemize}
+        \item[\textbf{a)}] Laske kompleksilukujen $z$ ja $w$ tulo
+        \[
+        \begin{aligned}    
+            (3-4i) \cdot (-1+2i)& \\
+            &= 3*(-1) + 3*2i -4i*(-1) -4i*2i \\
+            &= -3 + 10i -8i^2 \quad \mid i^2 = -1 \\
+            &= 5 + 10i
+        \end{aligned}
+        \]
+        \item[\textbf{b)}] Mikä on kompleksiluvun $w$ käänteisluku? \newline
+        Käytetään kaavaa
+        \[
+            \frac{1}{w} = \frac{1}{a + bi} = \frac{a - bi}{(a + bi)(a - bi)} = \frac{a - bi}{a^2 + b^2}
+                \quad \mid
+                \begin{aligned}
+                &\text{Tämä johtuu siitä, että } \\ &(a + bi)(a - bi) = a^2 + b^2
+                \text{on reaaliluku.}
+                \end{aligned}
+        \]
+        Liittoluku $\overline{w} = -1 - 2i$\newline
+        $\implies (w)(\overline{w}) = (-1 + 2i)(-1 - 2i) = (-1)^2 - (2i)^2 = 1 - (-4) = 5$\newline
+        Tulokseksi saadaan 5 joka on reaaliarvo, jolloin $w$ käänteisluku saadaan:\newline
+        \[
+        \frac{1}{w} = \frac{\overline{w}}{(w)(\overline{w})} = \frac{-1 - 2i}{5} = \frac{-1}{5} - \frac{2i}{5}
+        \]
+        eli kompleksiluvun $w = -1 + 2i$ käänteisluku on:
+        \[
+            \frac{1}{w} = -\frac{1}{5} - \frac{2i}{5}
+        \]
+\pagebreak
+        \item[\textbf{c)}] Laske kompleksilukujen $z$ ja $w$ osamäärä.\newline
+        \[
+            \frac{z}{w} = \frac{(z)(\overline{w})}{(w)(\overline{w})}
+        \]
+        Edellisestä tehtävästä näimme että $(w)(\overline{w}) = 5$ jolloin
+        \[
+        \begin{aligned}
+            & \frac{z}{w} = \frac{(z)(\overline{w})}{5} \\
+            \implies & \frac{z}{w} = \frac{(3-4i)(-1-2i)}{5} \\
+            = & \frac{(-3 -6i +4i + 8i^2)}{5}
+            = & \frac{-11 -2i}{5}
+        \end{aligned}
+        \]
+
+
+        
+    \end{itemize}
+
+
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+\end{document}
