@@ -118,7 +118,41 @@ Olkoot $z = 2\sqrt{3} - 2i$ ja $w = -1 + i$
     \[
         w = \sqrt{2} e^{i \frac{3\pi}{4}}
     \]
-    
-
 \end{itemize}
+
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+Olkoot $z, w \in \mathbb{C}, w \neq 0$. Osoita, että osamäärän liittoluku on liittolukujen osamäärä eli
+\[
+    \overline{\left(\frac{z}{w}\right)} = \frac{\overline{z}}{\overline{w}}
+\]
+Lasketaan ensin vasen puoli.
+\[
+    \begin{aligned}
+        z &= a + bi \\
+        w &= c + di \\
+        \implies \overline{w} &= c - di \\[10pt]
+        \text{Lasketaan ensin:} \\
+        \left(\frac{z}{w}\right) &\implies\left(\frac{(z)(\overline{w})}{(w)(\overline{w})}\right) = \left(\frac{(a + bi)(c -di)}{(c + di)(c - di)}\right) \\
+        &= \frac{ac - adi + cbi - bdi^2}{c^2 + d^2} \quad \mid i^2 = -1 \\
+        &= \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2} \\
+        \text{Jolloin liittoluku } \overline{\left(\frac{z}{w}\right)} \text{ on:}\\
+        &\frac{(ac + bd) - (bc - ad)i}{c^2 + d^2} \\
+    \end{aligned}
+ \]
+Sitten lasketaan oikea puoli.
+
+
+\[
+    \begin{aligned}
+        \overline{z} &= a - bi\\
+        \overline{w} &= c - di\\[10pt]
+        \frac{\overline{z}}{\overline{w}} &= \frac{(a - bi)(c + di)}{(c - di)(c + di)}\\
+        &= \frac{ac +adi -cbi -bdi^2}{c^2 + d^2}\\
+        &= \frac{(ac + bd)  + (ad -bc)i }{c^2 + d^2}\\
+        &= \frac{(ac + bd)  - (bc + ad)i }{c^2 + d^2}
+    \end{aligned}
+\]
+Eli $\overline{\left(\frac{z}{w}\right)} = \frac{\overline{z}}{\overline{w}}$ pätee.
 \end{document}
