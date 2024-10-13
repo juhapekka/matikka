@@ -155,4 +155,36 @@ Sitten lasketaan oikea puoli.
     \end{aligned}
 \]
 Eli $\overline{\left(\frac{z}{w}\right)} = \frac{\overline{z}}{\overline{w}}$ pätee.
+
+
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+Laske de Moivren kaavan avulla $(1 - \sqrt{3}i)^5$\newline
+Lasketaan ensin kompleksiluvun napaesitys.
+\[
+    r = |1 - \sqrt{3}i| = \sqrt{1^2 + (-\sqrt{3})^2} = \sqrt{1 + 3} = 2
+\]
+
+\[
+    arg(1 - \sqrt{3}i) = tan^{-1}\left(\frac{-\sqrt{3}}{1} \right) = tan^{-1}\left(-\sqrt{3} \right) = - \frac{\pi}{3}
+\]
+Koska reaaliosa on positiivinen ja imaginaariosa on negatiivinen sijaitsee kompleksiluku neljännessä neljänneksesssä eli $arg(1 - \sqrt{3}i) = - \frac{\pi}{3}$, saamme napaesityksen
+\[
+    \implies 2 \left( \cos\left( -\frac{\pi}{3} \right) + i \sin\left( -\frac{\pi}{3} \right) \right)
+\]
+Nyt de Moivren kaavalla
+\[
+\begin{aligned}
+    (1 - \sqrt{3}i)^5 &= \left[2 \left( \cos\left( -\frac{\pi}{3} \right) + i \sin\left( -\frac{\pi}{3} \right) \right)\right]^5 \\
+    &=32 \left( \cos\left( -\frac{5\pi}{3} \right) + i \sin\left( -\frac{5\pi}{3} \right) \right) \quad \mid \begin{aligned} &\text{lisätään kulmaan }2\pi \\&\text{jolloin saadaan positiivinen kulma} \end{aligned} \\
+    &=32 \left( \cos\left( \frac{\pi}{3} \right) - i \sin\left( \frac{\pi}{3} \right) \right) \quad \mid \text{huomioitiin sinin parittomuus} \\
+    &\text{sijoitetaan }
+    \cos\left( \frac{\pi}{3} \right) = \frac{1}{2} \text{ ja } 
+    \sin\left( \frac{\pi}{3} \right) = \frac{\sqrt{3}}{2} \\
+    \implies 
+    &32 \left( \frac{1}{2} - i \frac{\sqrt{3}}{2} \right)\\
+    &= 16 - 16i\sqrt{3}
+\end{aligned}
+\]
 \end{document}
