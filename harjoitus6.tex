@@ -201,11 +201,64 @@ Esitä kummankin kohdan (a) ja (b) juuret kompleksitasossa.
 \begin{itemize}
     \item[\textbf{a)}]
     \[ 
-    \begin{aligned}
-        z^8 &= 1\\
-        \implies z^8 - 1 &= 0\\[10pt]
-    \end{aligned}
+        z^8 = 1 = \cos(0) + i\sin(0) = e^{i0}
     \]
+    kompleksiluvun argumentti on periodinen $2\pi$:n välein joten voimme lisätä $2\pi$k argumenttiin, missä $k$ on kokonaisluku
+    \[
+        1 = \cos(2\pi k) + i\sin(2\pi k) = e^{i2\pi k}, \quad k \in \mathbb{Z}
+    \]
+    Nyt etsitään kaikki $z$ missä toteutuu
+    \[
+        z^8 = e^{i2\pi k}
+    \]
+    Otetaan kahdeksas juuri molemmilta puolilta
+    \[
+        z = \left( e^{i2\pi k} \right)^{\frac{1}{8}} = e^{i\frac{2\pi k}{8}} = e^{i\frac{\pi k}{4}}
+    \]
+    Missä \( k = 0, 1, 2, \dots, 7 \), näin saadaan juuret yhden $2\pi$:n jakson sisältä.\newline
+    Lasketaan juuret $z_k$:
+    \begin{itemize}
+        \item[] $k = 0$:
+        \[
+            z_0 = e^{i\frac{\pi \times 0}{4}} = e^{i0} = \cos(0) + i\sin(0) = 1
+        \]
+        \item[] $k = 1$:
+        \[
+            z_1 = e^{i\frac{\pi}{4}} = \cos\left( \frac{\pi}{4} \right) + i\sin\left( \frac{\pi}{4} \right) = \frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}
+        \]
+        \item[] $k = 2$:
+        \[
+            z_2 = e^{i\frac{\pi}{2}} = \cos\left( \frac{\pi}{2} \right) + i\sin\left( \frac{\pi}{2} \right) = 0 + i \times 1 = i
+        \]
+        \item[] $k = 3$:
+        \[
+            z_3 = e^{i\frac{3\pi}{4}} = \cos\left( \frac{3\pi}{4} \right) + i\sin\left( \frac{3\pi}{4} \right) = -\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}
+        \]
+        \item[] $k = 4$:
+        \[
+            z_4 = e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1 + i \times 0 = -1
+        \]
+        \item[] $k = 5$:
+        \[
+            z_5 = e^{i\frac{5\pi}{4}} = \cos\left( \frac{5\pi}{4} \right) + i\sin\left( \frac{5\pi}{4} \right) = -\frac{\sqrt{2}}{2} - i\frac{\sqrt{2}}{2}
+        \]
+        \item[] $k = 6$:
+        \[
+            z_6 = e^{i\frac{3\pi}{2}} = \cos\left( \frac{3\pi}{2} \right) + i\sin\left( \frac{3\pi}{2} \right) = 0 - i = -i
+        \]
+        \item[] $k = 7$:
+        \[
+            z_7 = e^{i\frac{7\pi}{4}} = \cos\left( \frac{7\pi}{4} \right) + i\sin\left( \frac{7\pi}{4} \right) = \frac{\sqrt{2}}{2} - i\frac{\sqrt{2}}{2}
+        \]
+    \end{itemize}
+
+
+
+
+
+
+
+    \iffalse
     aletaan faktoroimaan $z^8 - 1$
     \begin{itemize}
         \item[*] $z^8 - 1 = (z^4 - 1)(z^4 + 1)$
@@ -256,21 +309,22 @@ Esitä kummankin kohdan (a) ja (b) juuret kompleksitasossa.
         \end{aligned}
     \]
     \end{itemize}
+\fi
     Nyt voimme listata 8 juurta:
     \begin{itemize}
-        \item [0.] \( z_0 = 1 \)
-        \item [1.] \( z_1 = \dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2} \)
-        \item [2.] \( z_2 = i \)
-        \item [3.] \( z_3 = -\dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2} \)
-        \item [4.] \( z_4 = -1 \)
-        \item [5.] \( z_5 = -\dfrac{\sqrt{2}}{2} - i\dfrac{\sqrt{2}}{2} \)
-        \item [6.] \( z_6 = -i \)
-        \item [7.] \( z_7 = \dfrac{\sqrt{2}}{2} - i\dfrac{\sqrt{2}}{2} \)
+        \item [] \( z_0 = 1 \)
+        \item [] \( z_1 = \dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2} \)
+        \item [] \( z_2 = i \)
+        \item [] \( z_3 = -\dfrac{\sqrt{2}}{2} + i\dfrac{\sqrt{2}}{2} \)
+        \item [] \( z_4 = -1 \)
+        \item [] \( z_5 = -\dfrac{\sqrt{2}}{2} - i\dfrac{\sqrt{2}}{2} \)
+        \item [] \( z_6 = -i \)
+        \item [] \( z_7 = \dfrac{\sqrt{2}}{2} - i\dfrac{\sqrt{2}}{2} \)
     \end{itemize}
     \begin{center}
         \includegraphics[width=0.7\textwidth]{harj6teht5a.jpg}
     \end{center}
-    
+
     \newpage    
         
     \item[\textbf{b)}]kompleksiluvun i kuutiojuuret, siis kaikki kompleksiluvut jotka toteuttavat $z^3 = i$. \newline
@@ -346,7 +400,13 @@ Esitä kummankin kohdan (a) ja (b) juuret kompleksitasossa.
     \begin{center}
         \includegraphics[width=0.7\textwidth]{harj6teht5b.jpg}
     \end{center}
-
-
 \end{itemize}
+
+\newpage
+\stepcounter{tehtava}
+\section*{Tehtävä \thetehtava}
+Ratkaise kompleksilukujen joukossa yhtälöt\newline
+(a) $x^2 + 2x + 5 = 0$\newline
+(b) $x^4 - 2x^2 + 4 = 0$\newline
+Esitä kummankin kohdan (a) ja (b) ratkaisut kompleksitasossa.
 \end{document}
