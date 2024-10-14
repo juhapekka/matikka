@@ -409,4 +409,157 @@ Ratkaise kompleksilukujen joukossa yhtälöt\newline
 (a) $x^2 + 2x + 5 = 0$\newline
 (b) $x^4 - 2x^2 + 4 = 0$\newline
 Esitä kummankin kohdan (a) ja (b) ratkaisut kompleksitasossa.
+
+\begin{itemize}
+    \item [{\textbf{a)}}] $x^2 + 2x + 5 = 0$ on toisen asteen yhtälö, eleisessä muodossa $ax^2 + bx + c = 0$ 
+    missä $a = 1, b = 2, c = 5$\newline
+    Lasketaan diskriminantti $D = b^2 - 4ac$
+    \[
+        D = (2)^2 - 4 \times 1 \times 5 = 4 - 20 = -16
+    \]
+    Koska diskriminantti on negatiivinen ei ole olemassa reaalisia ratkaisuja mutta voi olla kompleksilukujen joukossa.
+    \[
+        \sqrt{D} = \sqrt{-16} = 4i
+    \]
+    sijoitetaan arvot toisen asteen yhtälön ratkaisukaavaan
+    \[
+        x = \frac{-b \pm \sqrt{D}}{2a} = \frac{-2 \pm 4i}{2 \times 1} = \frac{-2 \pm 4i}{2} = -1 \pm 2i
+    \]
+    Tästä nähdään että yhtälön ratkaisut ovat $-1 + 2i$ ja $-1 - 2i$
+
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{harj6teht6a.jpg}
+    \end{center}
+
+
+\newpage
+    \item [{\textbf{b)}}] $x^4 - 2x^2 + 4 = 0$ \newline
+    Kirjoitetaan $y = x^2$ jolloin yhtälö muuttuu muotoon $y^2 - 2y + 4 = 0$ ja käytetään toisen asteen yhtölän ratkaisukaavaa:
+    \[
+    y = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+    \]
+    missä arvoilla $a=1, b=-2, c=4$ lasketaan diskriminantti:
+    \[
+    D = b^2 - 4ac = (-2)^2 - 4 \times 1 \times 4 = 4 - 16 = -12
+    \]
+    Koska $D$ on negatiivinen saadaan kompleksiset juuret
+    \[
+        \sqrt{D} = \sqrt{-12} = \sqrt{12} \cdot i = 2\sqrt{3} \cdot i
+    \]
+    ratkaistaan $y$
+    \[
+    y = \frac{-(-2) \pm 2\sqrt{3} i}{2 \times 1} = \frac{2 \pm 2\sqrt{3} i}{2} = 1 \pm \sqrt{3} i
+    \]
+    eli $y$ saa arvot
+    \begin{itemize}
+        \item[] $y_1 = 1 + \sqrt{3} i$
+        \item[] $y_2 = 1 - \sqrt{3} i$
+    \end{itemize}
+    ja yritetään ratkaista $x$ jokaiselle $y$:
+    \begin{itemize}
+        \item[] $x^2 = y_1$
+        \item[] $x^2 = y_2$
+    \end{itemize}
+    \textbf{Ratkaistaan $x^2 = y_1$}:\newline
+    Määritetään $y_1$ napamuodossa\newline
+    \begin{itemize}
+        \item itseisarvo
+        \[
+            |y_1| = \sqrt{1^2 + (\sqrt{3})^2} = \sqrt{1 + 3} = 2
+        \]
+        \item argumentti
+        \[
+            \theta = tan^{-1}\left( \frac{\sqrt{3}}{1} \right) = \frac{\pi}{3}
+        \]
+    \end{itemize}
+    Lasketaan $x$ käyttämällä neliöjuuren kaavaa:
+    \[
+        x = \sqrt{|y_1|} \left( \cos\left( \frac{\theta}{2} + k\pi \right) + i \sin\left( \frac{\theta}{2} + k\pi \right) \right), \quad k = 0, 1
+    \]
+
+    \pagebreak
+    neliöjuurella on 2 arvoa:
+    \begin{itemize}
+        \item \textbf{k = 0:}
+        \[
+        \begin{aligned}            
+            x &= \sqrt{2} \left( \cos\left( \frac{\pi}{6} \right) + i \sin\left( \frac{\pi}{6} \right) \right) \quad \mid
+            \begin{aligned}
+                \cos\left( \frac{\pi}{6} \right) &= \frac{\sqrt{3}}{2},\\ \quad \sin\left( \frac{\pi}{6} \right) &= \frac{1}{2}
+            \end{aligned}\\
+            \implies 
+            x &= \sqrt{2} \left( \frac{\sqrt{3}}{2} + i \frac{1}{2} \right) = \frac{\sqrt{6}}{2} + i \frac{\sqrt{2}}{2}
+        \end{aligned}
+        \]
+        \item \textbf{k = 1:}
+        \[
+        \begin{aligned}
+            x &= \sqrt{2} \left( \cos\left( \frac{\pi}{6} + \pi \right) + i \sin\left( \frac{\pi}{6} + \pi \right) \right) \quad \mid
+            \begin{aligned}
+                \cos\left( \frac{7\pi}{6} \right) &= -\frac{\sqrt{3}}{2},\\ \quad \sin\left( \frac{7\pi}{6} \right) &= -\frac{1}{2}
+            \end{aligned} \\
+            \implies
+            x &= \sqrt{2} \left( -\frac{\sqrt{3}}{2} - i \frac{1}{2} \right) = -\frac{\sqrt{6}}{2} - i \frac{\sqrt{2}}{2}
+        \end{aligned}
+        \]
+    \end{itemize}
+
+    \textbf{Ratkaistaan $x^2 = y_2$}:\newline
+    Määritetään $y_2$ napamuodossa\newline
+    \begin{itemize}
+        \item itseisarvo
+        \[
+            |y_2| = \sqrt{1^2 + (-\sqrt{3})^2} = 2
+        \]
+        \item argumentti
+        \[
+            \theta = \arctan\left( \frac{-\sqrt{3}}{1} \right) = -\frac{\pi}{3}
+        \]
+    \end{itemize}
+    \pagebreak
+    Lasketaan $x$ käyttämällä neliöjuuren kaavaa:
+    \[
+        x = \sqrt{2} \left( \cos\left( \frac{\theta}{2} + k\pi \right) + i \sin\left( \frac{\theta}{2} + k\pi \right) \right), \quad k = 0, 1
+    \]
+
+
+
+    \begin{itemize}
+        \item \textbf{k = 0:}
+        \[
+        \begin{aligned}            
+            x &= \sqrt{2} \left( \cos\left( -\frac{\pi}{6} \right) + i \sin\left( -\frac{\pi}{6} \right) \right) \quad \mid
+            \begin{aligned}
+                \cos\left( -\frac{\pi}{6} \right) &= \frac{\sqrt{3}}{2},\\ \quad \sin\left( -\frac{\pi}{6} \right) &= -\frac{1}{2}
+            \end{aligned}\\
+            \implies 
+                x &= \sqrt{2} \left( \frac{\sqrt{3}}{2} - i \frac{1}{2} \right) = \frac{\sqrt{6}}{2} - i \frac{\sqrt{2}}{2}
+        \end{aligned}
+        \]
+        \item \textbf{k = 1:}
+        \[
+        \begin{aligned}
+            x &= \sqrt{2} \left( \cos\left( -\frac{\pi}{6} + \pi \right) + i \sin\left( -\frac{\pi}{6} + \pi \right) \right) \quad \mid
+            \begin{aligned}
+                \cos\left( \frac{5\pi}{6} \right) &= -\frac{\sqrt{3}}{2},\\ \quad \sin\left( \frac{5\pi}{6} \right) &= \frac{1}{2}
+            \end{aligned} \\
+            \implies
+            x &= \sqrt{2} \left( -\frac{\sqrt{3}}{2} + i \frac{1}{2} \right) = -\frac{\sqrt{6}}{2} + i \frac{\sqrt{2}}{2}
+        \end{aligned}
+        \]
+    \end{itemize}
+
+    Eli, yhtälön $x^4 - 2x^2 + 4 = 0$ ratkaisut kompleksilukujen joukossa ovat:
+    \begin{itemize}
+        \item []\( x_1 = \dfrac{\sqrt{6}}{2} + i \dfrac{\sqrt{2}}{2} \)
+        \item []\( x_2 = -\dfrac{\sqrt{6}}{2} - i \dfrac{\sqrt{2}}{2} \)
+        \item []\( x_3 = \dfrac{\sqrt{6}}{2} - i \dfrac{\sqrt{2}}{2} \)
+        \item []\( x_4 = -\dfrac{\sqrt{6}}{2} + i \dfrac{\sqrt{2}}{2} \)
+    \end{itemize}
+
+    \begin{center}
+        \includegraphics[width=0.45\textwidth]{harj6teht6b.jpg}
+    \end{center}
+
+\end{itemize}
 \end{document}
